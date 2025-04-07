@@ -9,10 +9,51 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background: #080808;
-  color: #fff;
+/* Dark mode css */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+
+:root {
+  --background-color: #0e0e0e;
+  --text-color: #ffffff;
+  --title-color: #000;
+}
+
+body.dark-theme {
+  --background-color: #ffffff;
+  --text-color: #767676;
+  --title-color: #dcdcdc;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle-btn {
+  background: #4864ff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+
+}
+
+.toggle-btn img {
+  width: 25px;
+  margin-left: 10px;
+}
+
+/*  */
+
+
 
 #header {
   width: 100%;
@@ -35,7 +76,7 @@ nav {
 
 /* For a sticky navigation bar */
 nav {
-  position: sticky;
+  position:relative;
   top: 0;
   z-index: 100;
 }
@@ -52,7 +93,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: #7f7f7f;
   text-decoration: none;
   font-size: 20px;
   position: relative;
@@ -62,7 +103,7 @@ nav ul li a::after {
   content: "";
   width: 0;
   height: 3px;
-  background: #ff004f;
+  background: #ff0957;
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -106,7 +147,8 @@ nav ul li a:hover::after {
 .about-col-2 {
   flex-basis: 60%;
 }
-.about-col-2 p{
+
+.about-col-2 p {
   font-size: 23px;
 }
 
