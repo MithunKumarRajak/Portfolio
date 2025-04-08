@@ -7,7 +7,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/e2ec8bd865.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
 </head>
 
@@ -221,57 +221,12 @@
                         class="fa-solid fa-heart  heard"></i>
                 </p>
             </div>
-
-
         </div>
     </div>
 
+    <button id="scrollUp"><i class="fa-duotone fa-solid fa-arrow-up"></i>
+    </button>
 
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname) {
-            for (let tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (let tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-    <script>
-        var sidemenu = document.querySelector("nav ul");
-        function openmenu() {
-            sidemenu.style.right = "0";
-        }
-        function closemenu() {
-            sidemenu.style.right = "-200px";
-        }
-
-
-    </script>
-
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwcGAZiE6cAoynmBaPoqPedCFTf1H2PjL5AFymY4tx8oCYRABjnoCcR1FdXpu18lhXh/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg");
-
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Message sent successfully";
-                    msg.style.color = "#24b300"
-                    setTimeout(() => {
-                        msg.innerHTML = "";
-                    }, 5000)
-                    form.reset();
-                })
-                .catch(error => console.error('Error!', error.message))
-        })
-    </script>
 
 </body>
 

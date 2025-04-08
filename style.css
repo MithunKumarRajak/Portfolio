@@ -23,7 +23,7 @@ html {
 
 body.dark-theme {
   --background-color: #ffffff;
-  --text-color: #767676;
+  --text-color: #919191;
   --title-color: #dcdcdc;
 }
 
@@ -39,16 +39,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150px;
-  height: 40px;
-  border-radius: 20px;
+  width: 100px;
+  height: 35px;
+  border-radius: 25px;
   cursor: pointer;
 
 }
 
 .toggle-btn img {
   width: 25px;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 /*  */
@@ -76,7 +76,7 @@ nav {
 
 /* For a sticky navigation bar */
 nav {
-  position:relative;
+  position: relative;
   top: 0;
   z-index: 100;
 }
@@ -450,6 +450,26 @@ form .btn2 {
   color: #ff004f;
 
 }
+
+/*  Scroll up button */
+#scrollUp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#scrollUp:hover {
+  background-color: #005ac8;
+}
+
 
 /* -------------CSS for small screens----------- */
 
