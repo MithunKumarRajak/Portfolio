@@ -11,7 +11,7 @@ Welcome to my personal portfolio! , I am a passionate developer who loves buildi
 🔗 **[View Live Portfolio Here](https://mithunkumarrajak.github.io/Portfolio/) ↗**
 ---
 
-## 🎨 Architecture: The Dual UI System
+## Architecture: Dual UI System
 
 To showcase both my design evolution and technical adaptability, this portfolio features a unique **Dual UI System**, allowing visitors to seamlessly toggle between two completely different interface paradigms:
 
@@ -27,7 +27,7 @@ To showcase both my design evolution and technical adaptability, this portfolio 
 
 ---
 
-## 🚀 Featured Projects
+## Projects
 
 My portfolio highlights several key projects that demonstrate my ability to solve real-world problems:
 
@@ -38,7 +38,7 @@ My portfolio highlights several key projects that demonstrate my ability to solv
 
 ---
 
-## 🛠️ Technical Skills Demonstrated
+## Technical Skills
 - **Languages:** Python, C/C++, Java, JavaScript, SQL
 - **Frontend:** HTML5, CSS3 (Flexbox/Grid), TailwindCSS, React
 - **Backend & DB:** FastAPI, Django, PostgreSQL, DBMS
