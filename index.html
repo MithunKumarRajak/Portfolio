@@ -1,233 +1,640 @@
 <!DOCTYPE html>
+<!-- portfolio — mithun kumar rajak -->
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/e2ec8bd865.js" crossorigin="anonymous"></script>
-    <script src="script.js" defer></script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mithun Kumar Rajak | Portfolio</title>
+  <meta name="description"
+    content="Hi, I'm Mithun — a CSE student at JLU Bhopal who builds full-stack apps and is way too into cybersecurity. Currently building ResumeScanner." />
+  <meta property="og:title" content="Mithun Kumar Rajak" />
+  <meta property="og:description"
+    content="CS student, full-stack dev, cybersec nerd. Check out what I've been building." />
+  <meta property="og:type" content="website" />
+  <style>
+    body {
+      visibility: hidden;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <!-- -------navigation bar------- -->
-    <div id="header">
-        <div class="container">
-            <nav id="sidemenu">
-                <img src="images/logo.png" alt="logo" />
-                <ul>
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
-                </ul>
-                <div id="btn" class="toggle-btn">
-                    <span id="btnText">Dark</span>
-                    <img id="btnIcon" src="images/moon.png" alt="icon" />
-                </div>
 
-                <!-- for small devices -->
-                <i class="fas fa-bars " onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <!-- <p>Programmer </p> -->
-                <h1>Hi, I'm <span>Mithun</span> <br />A Computer Science Student</h1>
-            </div>
-        </div>
+  <!-- nav -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#home" class="logo">mkr<span class="logo-dot">.</span></a>
+      <nav id="mainNav" class="main-nav">
+        <a href="#about" class="nav-a">about</a>
+        <a href="#work" class="nav-a">work</a>
+        <a href="#hackathons" class="nav-a">hackathons</a>
+        <a href="#contact" class="nav-a">contact</a>
+      </nav>
+      <a href="images/MithunKumarRajak_Resume.pdf" download class="nav-resume">resume ↗</a>
+      <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
+        <span class="theme-icon">☀️</span>
+        <span class="theme-label">Classic</span>
+      </button>
+      <button class="burger" id="burger" aria-label="menu">
+        <span></span><span></span>
+      </button>
     </div>
-    <!-------about------>
+  </header>
 
-    <div id="about">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/user.png" alt="image" />
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>
-                    Hey there, I'm Mithun Kumar Rajak, currently pursuing a Bachelor of Technology in Computer Science
-                    and Engineering at Jagran Lakecity University, Bhopal. My journey in technology has fueled a deep
-                    interest in computers, and I am particularly passionate about cybersecurity.<br>
-
-                    <strong> Learning is a core passion of mine, driving me to expand my knowledge and skills
-                        continuously.</strong>
-
-                    As a Certified Ethical Hacker (CEH v12), I have developed hands-on experience in penetration
-                    testing, vulnerability assessment, and incident response. Additionally, I hold the Google
-                    Cybersecurity Professional Certificate and Google AI Essentials.<br>
-
-                    Throughout my academic studies, I have gained skills in programming languages like Python, C/C++,
-                    Data structures and algorithms (DSA), Java and Web development. I am excited to apply these skills
-                    in a professional environment as I look forward to contributing to innovative solutions that protect
-                    organizations from cyber threats.
-                    <strong> Let's connect and explore opportunities in the dynamic fields of technology and
-                        cybersecurity!</strong>
-                </p>
-                <div class="tab-title">
-                    <p class="tab-links active-link" onclick="opentab('Skills')">
-                        Skills
-                    </p>
-                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('Education')">Education</p>
-                </div>
-                <div class="tab-contents active-tab" id="Skills">
-                    <ul>
-                        <li><span>Web development</span><br>HTML, CSS, JavaScrpt, TailwindCSS, React, NextJs, XML. </li>
-                        <li><span>Programming languages</span><br> C, C++, Python, Java, Javascript, </li>
-                        <li><span>Cyber Security</span><br>Kali Linux, CMD, Networking, Burp Suite,Nmap, Wireshark.
-                        </li>
-                        <li><span>Other Skills</span><br>SQL, DSA, ADA, DBMS, Prompting.</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="Experience">
-                    <ul>
-                        <li><span>Web development</span><br>Fresher</li>
-                        <li><span>Programming languages</span><br>Some Guided Project</li>
-                        <li><span>Cyber Security</span><br>Fresher</li>
-                        <li><span>Other Experience</span><br>NA</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="Education">
-                    <ul>
-                        <li><span>Matriculation</span><br>Bari Adarsh High School,Sanhoula - 2020</li>
-                        <li><span>Intermediate</span><br>T. N. B. College , Bhagalpur - 2022</li>
-                        <li><span>Higher Education</span><br>Persuing B.Tech.(CSE) at Jagran lakecity University,Bhopal
-                            - (2023-2027)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+  <!-- hero -->
+  <section id="home" class="hero">
+    <div class="hero-bg-blob"></div>
+    <div class="hero-bg-blob blob-2"></div>
+    <div class="hero-wrap">
+      <div class="hero-status">
+        <span class="status-dot"></span>
+        <span>available — looking for internships</span>
+      </div>
+      <h1 class="hero-name">Mithun Kumar<br><span class="accent-word">Rajak.</span></h1>
+      <p class="hero-tagline">
+        B.Tech CSE · JLU Bhopal · Full-stack developer + cybersecurity.
+      </p>
+      <p class="hero-desc">
+        I build full-stack apps, break into systems legally, and spend way too many hours on side projects.
+        Right now I'm working on <a href="https://github.com/MithunKumarRajak/ResumeScanner" target="_blank"
+          class="inline-link">ResumeScanner</a>
+        — an ML tool that actually tells you why your resume got rejected.
+      </p>
+      <div class="hero-btns">
+        <a href="#work" class="btn-solid">see my work</a>
+        <a href="#contact" class="btn-ghost">get in touch</a>
+      </div>
+      <div class="hero-links">
+        <a href="https://github.com/MithunKumarRajak" target="_blank" aria-label="GitHub"><i
+            class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mithun-kumar-rajak/" target="_blank" aria-label="LinkedIn"><i
+            class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:mithunrajak.dev@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
     </div>
-    <!----------services----------->
-    <div class="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>I offer modern web development solutions, specializing in HTML, CSS, JavaScript, TailwindCSS,
-                        React, Next.js, and XML. Whether it's creating a portfolio website, business website, or
-                        interactive web application, I focus on responsive, user-friendly, and optimized designs. My
-                        goal is to build websites that provide a seamless experience and strong functionality.
-                    </p>
-                    <a href="#">learn more</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-square-binary"></i>
-                    <h2>Cyber Security</h2>
-                    <p>With expertise in penetration testing, vulnerability assessment, and security analysis, I aim to
-                        help businesses and individuals secure their digital assets. I work with tools like Kali Linux,
-                        Burp Suite, Nmap, and Wireshark to analyze and strengthen security. Whether it’s network
-                        security, ethical hacking, or security awareness training, I strive to enhance cybersecurity
-                        defenses.
-                    </p>
-                    <a href="#">learn more</a>
-                </div>
-                <div>
-                    <i class="fa-brands fa-app-store"></i>
-                    <h2>Programming</h2>
-                    <p>I provide programming assistance and software solutions using C, C++, Python, Java, and
-                        JavaScript. My skills in Data Structures & Algorithms (DSA), Algorithm Design and Analysis
-                        (ADA), SQL, and DBMS allow me to develop efficient, scalable, and optimized solutions. From
-                        custom scripts to software applications, I am passionate about problem-solving and innovation.
-                    </p>
-                    <a href="#">Learn more</a>
-                </div>
-            </div>
-        </div>
+    <div class="hero-numbers">
+      <div class="h-num">
+        <span class="h-val" data-count="240">0</span><span class="h-plus">+</span>
+        <span class="h-label">GitHub contributions</span>
+      </div>
+      <div class="h-num">
+        <span class="h-val" data-count="28">0</span><span class="h-plus">+</span>
+        <span class="h-label">repositories</span>
+      </div>
+      <div class="h-num">
+        <span class="h-val h-text">top 20</span>
+        <span class="h-label">out of 650+ teams, HackWithAI 2026</span>
+      </div>
+      <div class="h-num">
+        <span class="h-val" data-count="6">0</span>
+        <span class="h-label">certifications</span>
+      </div>
     </div>
-    <!-------Portfolio-------->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="images/work-1.png" alt="work 1" />
-                    <div class="layer">
-                        <h3>Web Programming</h3>
-                        <p>I build responsive and high-performance websites using HTML, CSS, JavaScript, TailwindCSS,
-                            React, Next.js, and XML, ensuring seamless user experiences.</p>
-                        <a href="https://mithunkumarrajak.github.io/calculator/"><i
-                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/work-2.png" alt="work 2" />
-                    <div class="layer">
-                        <h3>Programming</h3>
-                        <p>Proficient in C, C++, Python, Java, and JavaScript, I develop efficient and secure software
-                            solutions, leveraging DSA, SQL, and DBMS for problem-solving and automation.
-                            I am committed to delivering innovative and secure solutions in web development,
-                            cybersecurity, and software engineering.</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/work-3.png" alt="work 3" />
-                    <div class="layer">
-                        <h3>Cyber Security</h3>
-                        <p>With expertise in penetration testing, vulnerability assessment, and network security, I work
-                            on analyzing and mitigating cyber threats to ensure system security. Certified in CEH v12,
-                            Google Cybersecurity Professional Certificate, and Google AI Essentials, I utilize tools
-                            like Kali Linux, Burp Suite, Nmap, and Wireshark to strengthen digital defenses and conduct
-                            security assessments.</p>
-                        <a href="https://www.linkedin.com/in/mithun-kumar-rajak/"><i
-                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="btn">See more</a>
+  </section>
 
+  <!-- about -->
+  <section id="about" class="section">
+    <div class="wrap">
+      <div class="sec-label reveal">01 / about</div>
+      <div class="about-grid">
+        <div class="about-img-col reveal">
+          <div class="about-img-wrap">
+            <img src="images/user.png" alt="Mithun Kumar Rajak" id="profileImg" />
+          </div>
+          <div class="about-chips">
+            <span>Python</span><span>React</span><span>FastAPI</span>
+            <span>Django</span><span>Kali Linux</span><span>ML/NLP</span>
+          </div>
+          <div class="about-socials">
+            <a href="https://github.com/MithunKumarRajak" target="_blank"><i class="fa-brands fa-github"></i> github</a>
+            <a href="https://www.linkedin.com/in/mithun-kumar-rajak/" target="_blank"><i
+                class="fa-brands fa-linkedin"></i> linkedin</a>
+          </div>
         </div>
-    </div>
-    <!----------contact------------>
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contacr me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i>contact@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i>+917631882219</p>
-                    <div class="social-icon">
-                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/mithun-kumar-rajak/"><i
-                                class="fa-brands fa-linkedin"></i></a>
-                        <a href="mkr@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-                        <a href="https://github.com/MithunKumarRajak"><i class="fa fa-github"
-                                aria-hidden="true"></i></a>
-                    </div>
-                    <a href="images/MithunKumarRajak_Resume.pdf" Download class="btn btn2">Download Resume</a>
-                </div>
-                <div class="contact-right">
-                    <!-- ----submit-to-google-sheet------- -->
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name " required>
-                        <input type="text" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
-            </div>
-            <div class="copyright">
+        <div class="about-text-col reveal">
+          <h2 class="about-heading">Hey, I'm Mithun.</h2>
+          <p>
+            3rd-year CSE student at Jagran Lakecity University, Bhopal — graduating 2027. I got into
+            coding because I couldn't stop wondering how software actually works under the hood.
+            At some point that curiosity turned into something I'd call a proper addiction.
+          </p>
+          <p>
+            Right now I'm building <strong>ResumeScanner</strong> from scratch — an ML-powered resume
+            screening tool using FastAPI, React, PostgreSQL and NLP. Started it because I kept getting
+            rejected and wanted to understand the ATS side of things. The tokenization debugging alone has
+            been character-building.
+          </p>
+          <p>
+            I also do cybersecurity on the side. Holds a Google Cybersecurity Professional cert and an
+            Ethical Hacking specialization. I like knowing how things break, not just how to build them.
+          </p>
 
-                <p>copyright <i class="fa-regular fa-copyright"></i> Mithun Made with <i
-                        class="fa-solid fa-heart  heard"></i>
-                </p>
+          <div class="now-card">
+            <span class="now-heading">// currently</span>
+            <div class="now-rows">
+              <div class="now-row">
+                <span class="now-pill">building</span>
+                <span>ResumeScanner — ML-powered ATS platform</span>
+              </div>
+              <div class="now-row">
+                <span class="now-pill">learning</span>
+                <span>Kubernetes (and trying not to lose my mind at yaml)</span>
+              </div>
+              <div class="now-row">
+                <span class="now-pill">open to</span>
+                <span>Internships in full-stack or cybersecurity</span>
+              </div>
             </div>
+          </div>
+
+          <div class="info-row">
+            <span><i class="fa-solid fa-location-dot"></i> Bhopal, MP</span>
+            <span><i class="fa-solid fa-graduation-cap"></i> CGPA 7.6 / JLU Bhopal</span>
+            <span><i class="fa-solid fa-envelope"></i> mithunrajak.dev@gmail.com</span>
+          </div>
+          <a href="images/MithunKumarRajak_Resume.pdf" download class="btn-solid"
+            style="margin-top:24px;display:inline-flex;align-items:center;gap:8px;">
+            <i class="fa-solid fa-download"></i> Download Resume
+          </a>
         </div>
+      </div>
     </div>
+  </section>
 
-    <button id="scrollUp"><i class="fa-duotone fa-solid fa-arrow-up"></i>
-    </button>
+  <!-- skills -->
+  <section id="skills" class="section section-alt">
+    <div class="wrap">
+      <div class="sec-label reveal">02 / skills</div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="sk-head"><i class="fa-solid fa-code"></i>
+            <h3>Languages</h3>
+          </div>
+          <div class="sk-tags">
+            <span>Python</span><span>JavaScript</span><span>TypeScript</span>
+            <span>C</span><span>C++</span><span>SQL</span><span>Bash</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="sk-head"><i class="fa-solid fa-browser"></i>
+            <h3>Frontend</h3>
+          </div>
+          <div class="sk-tags">
+            <span>React</span><span>Next.js</span><span>HTML5</span>
+            <span>CSS3</span><span>Tailwind CSS</span><span>Bootstrap</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="sk-head"><i class="fa-solid fa-server"></i>
+            <h3>Backend</h3>
+          </div>
+          <div class="sk-tags">
+            <span>FastAPI</span><span>Django</span><span>Node.js</span>
+            <span>Express.js</span><span>REST APIs</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="sk-head"><i class="fa-solid fa-database"></i>
+            <h3>Databases</h3>
+          </div>
+          <div class="sk-tags">
+            <span>PostgreSQL</span><span>MongoDB</span><span>MySQL</span><span>SQLite</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="sk-head"><i class="fa-solid fa-shield-halved"></i>
+            <h3>Security &amp; Cloud</h3>
+          </div>
+          <div class="sk-tags">
+            <span>Kali Linux</span><span>Burp Suite</span><span>Wireshark</span>
+            <span>Nmap</span><span>Splunk</span><span>AWS</span><span>GCP</span>
+            <span>Docker</span><span>Kubernetes</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="sk-head"><i class="fa-solid fa-brain"></i>
+            <h3>ML / Data</h3>
+          </div>
+          <div class="sk-tags">
+            <span>Scikit-Learn</span><span>Pandas</span><span>NLP</span>
+            <span>TF-IDF</span><span>Matplotlib</span><span>Seaborn</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- projects -->
+  <section id="work" class="section">
+    <div class="wrap">
+      <div class="sec-label reveal">03 / things I've built</div>
+      <div class="proj-top reveal">
+        <h2 class="sec-heading">Projects</h2>
+        <a href="https://github.com/MithunKumarRajak?tab=repositories" target="_blank" class="all-repos">all 28+ repos
+          →</a>
+      </div>
 
+      <!-- featured project -->
+      <div class="proj-featured reveal">
+        <div class="proj-feat-left">
+          <div class="proj-feat-meta">
+            <span class="proj-num">01</span>
+            <span class="badge-wip">in progress</span>
+            <span class="badge-feat">⭐ featured</span>
+          </div>
+          <h3>ResumeScanner</h3>
+          <p class="proj-feat-sub">ML-Based Resume Screening Platform</p>
+          <p class="proj-feat-desc">
+            ML-powered resume screening tool that analyzes, scores, and gives real feedback. Started this
+            because I kept getting rejected and wanted to understand why. FastAPI backend, React frontend,
+            PostgreSQL, TF-IDF vectorization for ATS-style scoring. Still shipping new features every week.
+          </p>
+          <div class="proj-stack">
+            <span>FastAPI</span><span>React</span><span>PostgreSQL</span>
+            <span>Python</span><span>NLP</span><span>TF-IDF</span><span>TypeScript</span>
+          </div>
+          <div class="proj-actions">
+            <a href="https://github.com/MithunKumarRajak/ResumeScanner" target="_blank" class="proj-btn"><i
+                class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="proj-feat-right">
+          <div class="feat-visual">
+            <div class="feat-code-block">
+              <span class="code-line"><span class="c-keyword">def</span> <span class="c-fn">score_resume</span>(resume,
+                jd):</span>
+              <span class="code-line"> vectorizer = TfidfVectorizer()</span>
+              <span class="code-line"> vectors = vectorizer.fit_transform(</span>
+              <span class="code-line"> [resume, jd])</span>
+              <span class="code-line"> score = cosine_similarity(</span>
+              <span class="code-line"> vectors[0], vectors[1])</span>
+              <span class="code-line c-comment"> <span class="c-comment"># returns match %</span></span>
+              <span class="code-line"> <span class="c-keyword">return</span> <span class="c-num">round</span>(score *
+                100, 2)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- other projects -->
+      <div class="proj-grid">
+        <div class="proj-card reveal">
+          <div class="proj-card-top">
+            <div class="proj-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+            <span class="badge-done">completed</span>
+          </div>
+          <h3>SmartShop</h3>
+          <p class="proj-sub">Full-Stack E-Commerce Platform · 2025</p>
+          <p class="proj-desc">Full e-commerce with Django REST API, JWT auth, Twilio SMS, product catalog, cart and
+            order tracking. Probably where I learned the most about backend architecture — had to rewrite the auth layer
+            twice.</p>
+          <div class="proj-stack">
+            <span>Django</span><span>Python</span><span>PostgreSQL</span><span>JWT</span><span>Twilio</span>
+          </div>
+          <div class="proj-actions">
+            <a href="https://github.com/MithunKumarRajak/e-commerce" target="_blank" class="proj-link"><i
+                class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-card-top">
+            <div class="proj-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <span class="badge-live">live</span>
+          </div>
+          <h3>PulseWatch</h3>
+          <p class="proj-sub">Employee Burnout Prediction · 2026</p>
+          <p class="proj-desc">Hybrid ML system for detecting employee burnout — combines multiple classifiers for
+            better accuracy. Interactive Streamlit dashboard. Streamlit's deployment is surprisingly solid for this kind
+            of interactive ML demo.</p>
+          <div class="proj-stack">
+            <span>Python</span><span>Scikit-Learn</span><span>Streamlit</span><span>Pandas</span>
+          </div>
+          <div class="proj-actions">
+            <a href="https://pulsewatch.streamlit.app/" target="_blank" class="proj-link live-link"><i
+                class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+            <a href="https://github.com/MithunKumarRajak/PulseWatch" target="_blank" class="proj-link"><i
+                class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-card-top">
+            <div class="proj-icon"><i class="fa-solid fa-calendar-check"></i></div>
+            <span class="badge-live">live</span>
+          </div>
+          <h3>EventFlex</h3>
+          <p class="proj-sub">On-Demand Event Staffing · 2025</p>
+          <p class="proj-desc">Platform connecting event organizers with professional staff. Built at SISTec Innovation
+            Hackathon. Full RBAC, JWT auth, Django backend. Still deployed and running on Vercel.</p>
+          <div class="proj-stack">
+            <span>Django</span><span>JWT</span><span>RBAC</span><span>Vercel</span>
+          </div>
+          <div class="proj-actions">
+            <a href="https://event-flex-tawny.vercel.app" target="_blank" class="proj-link live-link"><i
+                class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+            <a href="https://github.com/MithunKumarRajak/EventFlex" target="_blank" class="proj-link"><i
+                class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-card-top">
+            <div class="proj-icon"><i class="fa-solid fa-robot"></i></div>
+            <div class="proj-card-badges">
+              <span class="badge-live">live</span>
+              <span class="badge-award">🏆 top 20</span>
+            </div>
+          </div>
+          <h3>Satvika</h3>
+          <p class="proj-sub">AI Nutrition Label Generator · 2026</p>
+          <p class="proj-desc">Built in 24 hours at HackWithAI 2026 (KLH University). Mistral AI generates
+            FSSAI-compliant nutrition labels from ingredient lists. 500+ ingredient database, allergen detection. Placed
+            top 20 out of 650+ teams.</p>
+          <div class="proj-stack">
+            <span>Mistral AI</span><span>React</span><span>NLP</span><span>Vercel</span>
+          </div>
+          <div class="proj-actions">
+            <a href="https://klh-hackathon.vercel.app" target="_blank" class="proj-link live-link"><i
+                class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+            <a href="https://github.com/MithunKumarRajak/KLH-Hackathon" target="_blank" class="proj-link"><i
+                class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- hackathons -->
+  <section id="hackathons" class="section section-alt">
+    <div class="wrap">
+      <div class="sec-label reveal">04 / hackathons</div>
+      <h2 class="sec-heading reveal">Where I do my best sleep-deprived work.</h2>
+      <div class="hack-grid">
+
+        <div class="hack-card gold reveal">
+          <div class="hack-header">
+            <div class="hack-title-block">
+              <h3>HackWithAI 2026</h3>
+              <p>KLH University, Hyderabad · 27–28 Feb 2026</p>
+            </div>
+            <span class="hack-badge gold-badge">🏆 Top 20 / 650+ teams</span>
+          </div>
+          <p class="hack-meta"><i class="fa-solid fa-clock"></i> 24-hour offline &nbsp;·&nbsp; <i
+              class="fa-solid fa-users"></i> Team of 4</p>
+          <p class="hack-desc">
+            Built <strong>Satvika</strong> — an AI-powered FSSAI nutrition label generator. Mistral AI integration,
+            500+ ingredient database, allergen detection. We went in with an idea and shipped a working product by
+            morning. One of the most intense 24 hours I've had — also one of the best.
+          </p>
+          <div class="hack-links">
+            <a href="https://klh-hackathon.vercel.app" target="_blank" class="proj-link live-link"><i
+                class="fa-solid fa-arrow-up-right-from-square"></i> Live demo</a>
+            <a href="https://github.com/MithunKumarRajak/KLH-Hackathon" target="_blank" class="proj-link"><i
+                class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <div class="hack-card reveal">
+          <div class="hack-header">
+            <div class="hack-title-block">
+              <h3>SISTec Innovation Hackathon</h3>
+              <p>GoWow · SISTec, Bhopal · Oct 2025</p>
+            </div>
+            <span class="hack-badge">Participant</span>
+          </div>
+          <p class="hack-meta"><i class="fa-solid fa-tag"></i> Theme: Enterprise Information Management (EIM-03)</p>
+          <p class="hack-desc">
+            Built <strong>EventFlex</strong> — on-demand event staffing platform with Django, JWT auth and full RBAC.
+            The kind of project you look back on and think "we actually shipped that in a day?"
+          </p>
+          <div class="hack-links">
+            <a href="https://event-flex-tawny.vercel.app" target="_blank" class="proj-link live-link"><i
+                class="fa-solid fa-arrow-up-right-from-square"></i> Live demo</a>
+            <a href="https://github.com/MithunKumarRajak/EventFlex" target="_blank" class="proj-link"><i
+                class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- certifications -->
+  <section id="certs" class="section">
+    <div class="wrap">
+      <div class="sec-label reveal">05 / certifications &amp; achievements</div>
+      <div class="cert-layout">
+        <div class="ach-col reveal">
+          <h2 class="sec-heading">Achievements</h2>
+          <div class="ach-list">
+            <div class="ach-item">
+              <div class="ach-icon"><i class="fa-solid fa-trophy"></i></div>
+              <div>
+                <strong>Top 20 out of 650+ teams</strong>
+                <span>HackWithAI 2026, KLH University, Hyderabad</span>
+              </div>
+            </div>
+            <div class="ach-item">
+              <div class="ach-icon"><i class="fa-brands fa-github"></i></div>
+              <div>
+                <strong>240+ GitHub contributions</strong>
+                <span>Across 30+ repositories · 2024–25</span>
+              </div>
+            </div>
+            <div class="ach-item">
+              <div class="ach-icon"><i class="fa-brands fa-google"></i></div>
+              <div>
+                <strong>Google Cloud Arcade Champion</strong>
+                <span>Ultimate Milestone · Arcade Facilitator 2025</span>
+              </div>
+            </div>
+            <div class="ach-item">
+              <div class="ach-icon"><i class="fa-solid fa-rocket"></i></div>
+              <div>
+                <strong>2 projects deployed live</strong>
+                <span>EventFlex &amp; Satvika on Vercel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cert-col reveal">
+          <h2 class="sec-heading">Certifications</h2>
+          <div class="cert-list">
+            <div class="cert-row">
+              <div class="cert-icon g-icon"><i class="fa-brands fa-google"></i></div>
+              <div class="cert-info">
+                <strong>Google Cybersecurity Professional</strong>
+                <span>Google · Coursera · 8-course specialization</span>
+              </div>
+              <span class="cert-yr">Aug 2024</span>
+            </div>
+            <div class="cert-row">
+              <div class="cert-icon s-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="cert-info">
+                <strong>Ethical Hacking Specialization</strong>
+                <span>LearnKartS · Coursera</span>
+              </div>
+              <span class="cert-yr">Sep 2024</span>
+            </div>
+            <div class="cert-row">
+              <div class="cert-icon g-icon"><i class="fa-brands fa-google"></i></div>
+              <div class="cert-info">
+                <strong>Google AI Essentials</strong>
+                <span>Google</span>
+              </div>
+              <span class="cert-yr">Sep 2024</span>
+            </div>
+            <div class="cert-row">
+              <div class="cert-icon g-icon"><i class="fa-brands fa-google"></i></div>
+              <div class="cert-info">
+                <strong>Google Prompting Essentials</strong>
+                <span>Google</span>
+              </div>
+              <span class="cert-yr">Apr 2025</span>
+            </div>
+            <div class="cert-row">
+              <div class="cert-icon d-icon"><i class="fa-brands fa-docker"></i></div>
+              <div class="cert-info">
+                <strong>Virtualization &amp; Containers (Docker)</strong>
+                <span>KodeKloud</span>
+              </div>
+              <span class="cert-yr">Dec 2025</span>
+            </div>
+            <div class="cert-row">
+              <div class="cert-icon c-icon"><i class="fa-solid fa-cloud"></i></div>
+              <div class="cert-info">
+                <strong>Google Cloud Arcade Facilitator</strong>
+                <span>Google Cloud · Ultimate Milestone</span>
+              </div>
+              <span class="cert-yr">2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- education -->
+  <section id="education" class="section section-alt">
+    <div class="wrap">
+      <div class="sec-label reveal">06 / education</div>
+      <div class="edu-cards reveal">
+        <div class="edu-card">
+          <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="edu-body">
+            <h3>B.Tech — Computer Science &amp; Engineering</h3>
+            <p>Jagran Lakecity University, Bhopal, MP</p>
+          </div>
+          <div class="edu-meta">
+            <span class="edu-yr">2023 – 2027</span>
+            <span class="edu-grade">CGPA 7.6 / 10</span>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon"><i class="fa-solid fa-school"></i></div>
+          <div class="edu-body">
+            <h3>Higher Secondary (12th)</h3>
+            <p>T.N.B. College, Bhagalpur, Bihar</p>
+          </div>
+          <div class="edu-meta">
+            <span class="edu-yr">2022</span>
+            <span class="edu-grade">71% · Bihar Board</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact -->
+  <section id="contact" class="section">
+    <div class="wrap">
+      <div class="sec-label reveal">07 / contact</div>
+      <div class="contact-grid">
+        <div class="contact-left reveal">
+          <h2 class="contact-heading">drop me a line.</h2>
+          <p class="contact-intro">
+            Hiring, collaborating, or just want to talk about something you're building —
+            I check my email pretty regularly.
+          </p>
+          <div class="contact-items">
+            <a href="mailto:mithunrajak.dev@gmail.com" class="c-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>mithunrajak.dev@gmail.com</span>
+            </a>
+            <a href="tel:+917631882219" class="c-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 76318 82219</span>
+            </a>
+            <a href="https://www.linkedin.com/in/mithun-kumar-rajak/" target="_blank" class="c-item">
+              <i class="fa-brands fa-linkedin"></i>
+              <span>linkedin.com/in/mithun-kumar-rajak</span>
+            </a>
+            <a href="https://github.com/MithunKumarRajak" target="_blank" class="c-item">
+              <i class="fa-brands fa-github"></i>
+              <span>github.com/MithunKumarRajak</span>
+            </a>
+          </div>
+          <a href="images/MithunKumarRajak_Resume.pdf" download class="btn-ghost"
+            style="margin-top:28px;display:inline-flex;align-items:center;gap:8px;">
+            <i class="fa-solid fa-download"></i> Resume PDF
+          </a>
+        </div>
+        <div class="contact-right reveal">
+          <form id="contactForm" name="submit-to-google-sheet">
+            <div class="field">
+              <label for="nameInput">Name</label>
+              <input type="text" id="nameInput" name="Name" placeholder="Your name" required />
+            </div>
+            <div class="field">
+              <label for="emailInput">Email</label>
+              <input type="email" id="emailInput" name="Email" placeholder="your@email.com" required />
+            </div>
+            <div class="field">
+              <label for="subjectInput">Subject</label>
+              <input type="text" id="subjectInput" name="Subject" placeholder="Internship, collab, or just saying hi" />
+            </div>
+            <div class="field">
+              <label for="msgInput">Message</label>
+              <textarea id="msgInput" name="Message" rows="5" placeholder="What's on your mind?"></textarea>
+            </div>
+            <button type="submit" id="submitBtn">
+              <i class="fa-solid fa-paper-plane"></i> Send message
+            </button>
+            <span id="formMsg"></span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-row">
+        <span class="footer-brand">mkr<span class="logo-dot">.</span></span>
+        <p>Coded by Mithun · 2025 - <span id="year"></span> </p>
+        <div class="footer-socials">
+          <a href="https://github.com/MithunKumarRajak" target="_blank" aria-label="GitHub"><i
+              class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/mithun-kumar-rajak/" target="_blank" aria-label="LinkedIn"><i
+              class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:mithunrajak.dev@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scrollTop" title="back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <script src="script.js"></script>
 </body>
 
 </html>
