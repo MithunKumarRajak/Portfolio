@@ -1567,7 +1567,10 @@ body.classic .theme-toggle-btn:hover {
   animation: floatBlob 20s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
 }
 body.light .blob { opacity: 0.25; }
-body.classic .mesh-bg { display: none; }
+body.classic .mesh-bg { display: block; opacity: 0.7; background: transparent; }
+body.classic .blob-1 { background: rgba(79, 70, 229, 0.45); }
+body.classic .blob-2 { background: rgba(8, 145, 178, 0.45); }
+body.classic .blob-3 { background: rgba(22, 163, 74, 0.45); }
 
 .blob-1 { width: 400px; height: 400px; background: #ff004f; top: -10%; left: -10%; }
 .blob-2 { width: 500px; height: 500px; background: #4864ff; bottom: -20%; right: -10%; animation-delay: -5s; }
