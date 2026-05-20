@@ -23,7 +23,7 @@ function applyTheme(isClassic) {
 }
 
 // restore saved preference
-const saved = localStorage.getItem('portfolio-theme');
+const saved = localStorage.getItem('portfolio-theme') || 'classic';
 applyTheme(saved === 'classic');
 
 themeBtn.addEventListener('click', () => {
@@ -173,3 +173,61 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.visibility = 'visible';
   });
 });
+/* --- PREMIUM UI FEATURES --- */
+
+// Custom Cursor
+const cursor = document.getElementById('cursor');
+const follower = document.getElementById('cursor-follower');
+
+if (cursor && follower && window.matchMedia('(min-width: 768px)').matches) {
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+    
+    // Smooth delay for follower
+    setTimeout(() => {
+      follower.style.left = e.clientX + 'px';
+      follower.style.top = e.clientY + 'px';
+    }, 50);
+  });
+
+  const hoverElements = document.querySelectorAll('a, button, .proj-card, .bento-item, .theme-toggle-btn');
+  hoverElements.forEach(el => {
+    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+  });
+}
+
+// 3D Tilt Effect on Cards
+const tiltElements = document.querySelectorAll('.proj-card, .bento-item');
+
+if (window.matchMedia('(min-width: 768px)').matches) {
+  tiltElements.forEach(el => {
+    el.addEventListener('mousemove', (e) => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const xPct = x / rect.width - 0.5;
+      const yPct = y / rect.height - 0.5;
+      
+      // Calculate rotation based on cursor position
+      const rotateX = yPct * -10; // Max 5 deg
+      const rotateY = xPct * 10;
+      
+      el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    });
+    
+    el.addEventListener('mouseleave', () => {
+      // Reset transform but keep it ready for reveal animations
+      el.style.transform = `perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)`;
+      
+      // Clear inline transform after transition so CSS reveal can take over if needed
+      setTimeout(() => {
+        if (!el.matches(':hover')) {
+          el.style.transform = '';
+        }
+      }, 300);
+    });
+  });
+}
