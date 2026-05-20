@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="original.css?v=2" />
+    <script src="https://kit.fontawesome.com/e2ec8bd865.js" crossorigin="anonymous"></script>
+    <script src="original.js?v=2" defer></script>
+
+</head>
+
+<body>
+    <!-- -------navigation bar------- -->
+    <div id="header">
+        <div class="container">
+            <nav id="sidemenu">
+                <img src="images/logo.png" alt="logo" />
+                <ul>
+                    <li><a href="index.html" style="color:#ff004f;">New UI ↗</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <div id="btn" class="toggle-btn">
+                    <span id="btnText">Dark</span>
+                    <img id="btnIcon" src="images/moon.png" alt="icon" />
+                </div>
+
+                <!-- for small devices -->
+                <i class="fas fa-bars " onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <!-- <p>Programmer </p> -->
+                <h1>Hi, I'm <span>Mithun</span> <br />A Computer Science Student</h1>
+            </div>
+        </div>
+    </div>
+    <!-------about------>
+
+    <div id="about">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png" alt="image" />
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>
+                    Hey there, I'm Mithun Kumar Rajak, currently pursuing a B.Tech in Computer Science
+                    and Engineering at Jagran Lakecity University, Bhopal (Class of 2027). I'm a full-stack developer
+                    who is deeply passionate about cybersecurity and machine learning.<br>
+
+                    <strong> Currently building ResumeScanner — an ML-powered resume screening platform.</strong>
+
+                    As a Certified Ethical Hacker and Google Cybersecurity Professional, I have hands-on experience with
+                    vulnerability assessment and secure development. I also recently placed in the Top 20 out of 650+
+                    teams
+                    at HackWithAI 2026.<br>
+
+                    I love building things from scratch using Python, React, FastAPI, and PostgreSQL. I am actively
+                    looking
+                    for internship opportunities to apply my technical skills and contribute to innovative solutions.
+                    <strong> Let's connect and build something great!</strong>
+                </p>
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab(event, 'Skills')">
+                        Skills
+                    </p>
+                    <p class="tab-links" onclick="opentab(event, 'Projects')">Projects</p>
+                    <p class="tab-links" onclick="opentab(event, 'Education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>Web development</span><br>HTML, CSS, JavaScript, TailwindCSS, React, Next.js, XML.
+                        </li>
+                        <li><span>Programming languages</span><br> C, C++, Python, Java, JavaScript, </li>
+                        <li><span>Cyber Security</span><br>Kali Linux, CMD, Networking, Burp Suite, Nmap, Wireshark.
+                        </li>
+                        <li><span>Other Skills</span><br>SQL, DSA, ADA, DBMS, Prompting.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Projects">
+                    <ul>
+                        <li><span>ResumeScanner</span><br>ML-based resume screening platform (FastAPI, React, NLP)</li>
+                        <li><span>Satvika (HackWithAI 2026)</span><br>AI Nutrition Label Generator (Mistral AI, Top 20)
+                        </li>
+                        <li><span>EventFlex</span><br>On-Demand Event Staffing Platform (Django, JWT, RBAC)</li>
+                        <li><span>PulseWatch</span><br>Employee Burnout Prediction (Python, Scikit-Learn)</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>Matriculation</span><br>Bari Adarsh High School - 2020</li>
+                        <li><span>Intermediate</span><br>T. N. B. College, Bhagalpur - 2022</li>
+                        <li><span>Higher Education</span><br>Pursuing B.Tech. (CSE) at Jagran Lakecity University,
+                            Bhopal
+                            - (2023-2027)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------services----------->
+    <div class="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>I offer modern web development solutions, specializing in HTML, CSS, JavaScript, TailwindCSS,
+                        React, Next.js, and XML. Whether it's creating a portfolio website, business website, or
+                        interactive web application, I focus on responsive, user-friendly, and optimized designs. My
+                        goal is to build websites that provide a seamless experience and strong functionality.
+                    </p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-square-binary"></i>
+                    <h2>Cyber Security</h2>
+                    <p>With expertise in penetration testing, vulnerability assessment, and security analysis, I aim to
+                        help businesses and individuals secure their digital assets. I work with tools like Kali Linux,
+                        Burp Suite, Nmap, and Wireshark to analyze and strengthen security. Whether itΓÇÖs network
+                        security, ethical hacking, or security awareness training, I strive to enhance cybersecurity
+                        defenses.
+                    </p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>Programming</h2>
+                    <p>I provide programming assistance and software solutions using C, C++, Python, Java, and
+                        JavaScript. My skills in Data Structures & Algorithms (DSA), Algorithm Design and Analysis
+                        (ADA), SQL, and DBMS allow me to develop efficient, scalable, and optimized solutions. From
+                        custom scripts to software applications, I am passionate about problem-solving and innovation.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------Portfolio-------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="ResumeScanner" />
+                    <div class="layer">
+                        <h3>ResumeScanner</h3>
+                        <p>An ML-powered resume screening tool that scores resumes against job descriptions using TF-IDF
+                            vectorization and FastAPI.</p>
+                        <a href="https://github.com/MithunKumarRajak/ResumeScanner" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" alt="Satvika" />
+                    <div class="layer">
+                        <h3>Satvika (HackWithAI)</h3>
+                        <p>AI Nutrition Label Generator built in 24 hours. Placed Top 20 out of 650+ teams at KLH
+                            University Hackathon.</p>
+                        <a href="https://klh-hackathon.vercel.app" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" alt="EventFlex" />
+                    <div class="layer">
+                        <h3>EventFlex</h3>
+                        <p>On-demand event staffing platform with Django and JWT authentication. Built during the SISTec
+                            Innovation Hackathon.</p>
+                        <a href="https://event-flex-tawny.vercel.app" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/MithunKumarRajak?tab=repositories" target="_blank" class="btn">See more
+                projects</a>
+
+        </div>
+    </div>
+    <!----------contact------------>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>mithunrajak.dev@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+917631882219</p>
+                    <div class="social-icon">
+                        <a href="https://github.com/MithunKumarRajak" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/mithun-kumar-rajak/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="mailto:mithunrajak.dev@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                    <a href="images/MithunKumarRajak_Resume.pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <!-- ----submit-to-google-sheet------- -->
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name " required>
+                        <input type="text" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+            <div class="copyright">
+
+                <p>copyright <i class="fa-regular fa-copyright"></i> Mithun Made with <i
+                        class="fa-solid fa-heart  heard"></i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <button id="scrollUp"><i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+</body>
+
+</html>
