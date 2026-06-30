@@ -25,8 +25,6 @@ To showcase both my design evolution and technical adaptability, this portfolio 
    - Functionally restored with cross-browser compatible JavaScript.
    - **Note:** The content in this original UI has been dynamically updated to reflect my *latest* projects and achievements, ensuring accuracy no matter which UI you prefer to browse!
 
----
-
 
 
 ---
