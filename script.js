@@ -23,7 +23,7 @@ function applyTheme(isClassic) {
 }
 
 // restore saved preference
-const saved = localStorage.getItem('portfolio-theme') || 'classic';
+const saved = localStorage.getItem('portfolio-theme') || 'modern';
 applyTheme(saved === 'classic');
 
 themeBtn.addEventListener('click', () => {
@@ -173,9 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.visibility = 'visible';
   });
 });
-/* --- PREMIUM UI FEATURES --- */
-
-// Custom Cursor
+// ---- custom cursor ----
 const cursor = document.getElementById('cursor');
 const follower = document.getElementById('cursor-follower');
 
@@ -183,12 +181,8 @@ if (cursor && follower && window.matchMedia('(min-width: 768px)').matches) {
   document.addEventListener('mousemove', (e) => {
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
-    
-    // Smooth delay for follower
-    setTimeout(() => {
-      follower.style.left = e.clientX + 'px';
-      follower.style.top = e.clientY + 'px';
-    }, 50);
+    follower.style.left = e.clientX + 'px';
+    follower.style.top = e.clientY + 'px';
   });
 
   const hoverElements = document.querySelectorAll('a, button, .proj-card, .bento-item, .theme-toggle-btn');

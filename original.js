@@ -1,23 +1,4 @@
-// JavaScript
-document.addEventListener("DOMContentLoaded", function () {
-    // Show the home section by default
-    document.querySelector(".section").classList.add("active");
-});
-
-function showSection(sectionId) {
-    // Hide all sections
-    document.querySelectorAll('.section').forEach(section => {
-        section.classList.remove('active');
-    });
-
-    // Show the selected section
-    const activeSection = document.getElementById(sectionId);
-    if (activeSection) {
-        activeSection.classList.add('active');
-    }
-}
-
-// Dark mode 
+// dark mode toggle
 window.onload = function () {
     let btn = document.getElementById("btn");
     let btnText = document.getElementById("btnText");
@@ -36,8 +17,7 @@ window.onload = function () {
     };
 };
 
-// Google form submit
-
+// google form submit
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwcGAZiE6cAoynmBaPoqPedCFTf1H2PjL5AFymY4tx8oCYRABjnoCcR1FdXpu18lhXh/exec'
 const form = document.forms['submit-to-google-sheet']
 const msg = document.getElementById("msg");
@@ -55,8 +35,8 @@ form.addEventListener('submit', e => {
         })
         .catch(error => console.error('Error!', error.message))
 })
-// side bar menu for small device
 
+// sidebar menu for small screens
 var sidemenu = document.querySelector("nav ul");
 function openmenu() {
     sidemenu.style.right = "0";
@@ -65,8 +45,7 @@ function closemenu() {
     sidemenu.style.right = "-200px";
 }
 
-// Tab link
-
+// tab switching
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 function opentab(event, tabname) {
@@ -80,22 +59,13 @@ function opentab(event, tabname) {
     document.getElementById(tabname).classList.add("active-tab");
 }
 
-// scroll up button
+// scroll-to-top button
 const scrollUpButton = document.getElementById('scrollUp');
 
-// Show the button when the user scrolls down 200px
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
-        scrollUpButton.style.display = 'block';
-    } else {
-        scrollUpButton.style.display = 'none';
-    }
+    scrollUpButton.style.display = window.scrollY > 200 ? 'block' : 'none';
 });
 
-// Scroll to the top when the button is clicked
 scrollUpButton.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
