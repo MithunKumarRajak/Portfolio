@@ -27,25 +27,6 @@ To showcase both my design evolution and technical adaptability, this portfolio 
 
 ---
 
-## Projects
-
-My portfolio highlights several key projects that demonstrate my ability to solve real-world problems:
-
-- **ResumeScanner**: An ML-powered platform that scores resumes against job descriptions using TF-IDF vectorization. Tech: FastAPI, React, NLP
-- **Satvika (HackWithAI 2026)**: AI Nutrition Label Generator built in 24 hours. Placed **Top 20 out of 650+ teams**. Tech: Mistral AI, Python
-- **EventFlex**: On-Demand Event Staffing Platform featuring Role-Based Access Control. Tech: Django, PostgreSQL, JWT
-- **PulseWatch**: Hybrid ML system for Employee Burnout Prediction. Tech: Python, Scikit-Learn, Streamlit
-
----
-
-## Technical Skills
-- **Languages:** Python, C/C++, Java, JavaScript, SQL
-- **Frontend:** HTML5, CSS3 (Flexbox/Grid), TailwindCSS, React
-- **Backend & DB:** FastAPI, Django, PostgreSQL, DBMS
-- **Security & Tools:** Kali Linux, Burp Suite, Nmap, Wireshark, Git & GitHub
-
----
-
 
 
 ---
