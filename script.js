@@ -3,6 +3,9 @@
 */
 'use strict';
 
+// Fallback: ensure body becomes visible even if an error occurs below
+setTimeout(() => { document.body.style.visibility = 'visible'; }, 2000);
+
 // ---- header scroll state ----
 const header    = document.getElementById('header');
 const burger    = document.getElementById('burger');
@@ -129,7 +132,7 @@ if (contactForm) {
     try {
       await fetch(SCRIPT_URL, {
         method: 'POST',
-        mode: 'no-cors',
+        mode: 'no-cors', // required for Google Apps Script; response is opaque
         body: new FormData(contactForm),
       });
       formMsg.textContent = "✓ Got it — I'll get back to you soon.";
@@ -185,7 +188,7 @@ if (cursor && follower && window.matchMedia('(min-width: 768px)').matches) {
     follower.style.top = e.clientY + 'px';
   });
 
-  const hoverElements = document.querySelectorAll('a, button, .proj-card, .bento-item, .theme-toggle-btn');
+  const hoverElements = document.querySelectorAll('a, button, .proj-card, .theme-toggle-btn');
   hoverElements.forEach(el => {
     el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
     el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
@@ -193,7 +196,7 @@ if (cursor && follower && window.matchMedia('(min-width: 768px)').matches) {
 }
 
 // 3D Tilt Effect on Cards
-const tiltElements = document.querySelectorAll('.proj-card, .bento-item');
+const tiltElements = document.querySelectorAll('.proj-card');
 
 if (window.matchMedia('(min-width: 768px)').matches) {
   tiltElements.forEach(el => {
@@ -206,7 +209,7 @@ if (window.matchMedia('(min-width: 768px)').matches) {
       const yPct = y / rect.height - 0.5;
       
       // Calculate rotation based on cursor position
-      const rotateX = yPct * -10; // Max 5 deg
+      const rotateX = yPct * -10; // Max 10 deg
       const rotateY = xPct * 10;
       
       el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;

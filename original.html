@@ -5,6 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mithun Kumar Rajak | Portfolio</title>
+    <meta name="description" content="Portfolio of Mithun Kumar Rajak — Full-stack developer, Certified Ethical Hacker, and B.Tech CSE student. Explore projects, skills, and services." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="original.css?v=2" />
     <script src="https://kit.fontawesome.com/e2ec8bd865.js" crossorigin="anonymous"></script>
     <script src="original.js?v=2" defer></script>
@@ -13,10 +17,10 @@
 
 <body>
     <!-- -------navigation bar------- -->
-    <div id="header">
+    <header id="header">
         <div class="container">
             <nav id="sidemenu">
-                <img src="images/logo.png" alt="logo" />
+                <img src="images/logo.png" alt="logo" class="logo" />
                 <ul>
                     <li><a href="index.html" style="color:#ff004f;">New UI ↗</a></li>
                     <li><a href="#header">Home</a></li>
@@ -24,7 +28,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
+                    <li><i class="fas fa-times" onclick="closemenu()" role="button" tabindex="0" aria-label="Close menu"></i></li>
                 </ul>
                 <div id="btn" class="toggle-btn">
                     <span id="btnText">Dark</span>
@@ -32,23 +36,23 @@
                 </div>
 
                 <!-- for small devices -->
-                <i class="fas fa-bars " onclick="openmenu()"></i>
+                <i class="fas fa-bars" onclick="openmenu()" role="button" tabindex="0" aria-label="Open menu"></i>
             </nav>
             <div class="header-text">
                 <!-- <p>Programmer </p> -->
                 <h1>Hi, I'm <span>Mithun</span> <br />A Computer Science Student</h1>
             </div>
         </div>
-    </div>
+    </header>
     <!-------about------>
 
-    <div id="about">
+    <section id="about">
         <div class="row">
             <div class="about-col-1">
                 <img src="images/user.png" alt="image" />
             </div>
             <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
+                <h2 class="sub-title">About Me</h2>
                 <p>
                     Hey there, I'm Mithun Kumar Rajak, currently pursuing a B.Tech in Computer Science
                     and Engineering at Jagran Lakecity University, Bhopal (Class of 2027). I'm a full-stack developer
@@ -67,11 +71,11 @@
                     <strong> Let's connect and build something great!</strong>
                 </p>
                 <div class="tab-title">
-                    <p class="tab-links active-link" onclick="opentab(event, 'Skills')">
+                    <button class="tab-links active-link" onclick="opentab(event, 'Skills')">
                         Skills
-                    </p>
-                    <p class="tab-links" onclick="opentab(event, 'Projects')">Projects</p>
-                    <p class="tab-links" onclick="opentab(event, 'Education')">Education</p>
+                    </button>
+                    <button class="tab-links" onclick="opentab(event, 'Projects')">Projects</button>
+                    <button class="tab-links" onclick="opentab(event, 'Education')">Education</button>
                 </div>
                 <div class="tab-contents active-tab" id="Skills">
                     <ul>
@@ -103,11 +107,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!----------services----------->
-    <div class="services">
+    <section id="services" class="services">
         <div class="container">
-            <h1 class="sub-title">My Services</h1>
+            <h2 class="sub-title">My Services</h2>
             <div class="services-list">
                 <div>
                     <i class="fa-solid fa-code"></i>
@@ -142,11 +146,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-------Portfolio-------->
-    <div id="portfolio">
+    <section id="portfolio">
         <div class="container">
-            <h1 class="sub-title">My Work</h1>
+            <h2 class="sub-title">My Work</h2>
             <div class="work-list">
                 <div class="work">
                     <img src="images/work-1.png" alt="ResumeScanner" />
@@ -183,13 +187,13 @@
                 projects</a>
 
         </div>
-    </div>
+    </section>
     <!----------contact------------>
-    <div id="contact">
+    <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
-                    <h1 class="sub-title">Contact me</h1>
+                    <h2 class="sub-title">Contact me</h2>
                     <p><i class="fa-solid fa-paper-plane"></i>mithunrajak.dev@gmail.com</p>
                     <p><i class="fa-solid fa-phone"></i>+917631882219</p>
                     <div class="social-icon">
@@ -205,21 +209,21 @@
                     <!-- ----submit-to-google-sheet------- -->
                     <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name " required>
-                        <input type="text" name="Email" placeholder="Your Email" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
                     <span id="msg"></span>
                 </div>
             </div>
-            <div class="copyright">
+            <footer class="copyright">
 
                 <p>copyright <i class="fa-regular fa-copyright"></i> Mithun Made with <i
                         class="fa-solid fa-heart  heard"></i>
                 </p>
-            </div>
+            </footer>
         </div>
-    </div>
+    </section>
 
     <button id="scrollUp"><i class="fa-solid fa-arrow-up"></i>
     </button>

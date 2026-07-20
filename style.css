@@ -2,7 +2,7 @@
   style.css — mithun's portfolio
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+/* Fonts loaded via <link> in index.html — no duplicate @import needed */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -129,6 +129,13 @@ a { text-decoration: none; color: inherit; }
   border-color: var(--accent);
   color: var(--accent-l);
   transform: translateY(-2px);
+}
+
+.btn-download {
+  margin-top: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 
@@ -1517,7 +1524,7 @@ body.classic .theme-toggle-btn:hover {
    CUSTOM CURSOR + 3D TILT
    ============================================================ */
 @media (min-width: 768px) {
-  body, a, button, .proj-card, .bento-item { cursor: none; }
+  body, a, button, .proj-card { cursor: none; }
 }
 .custom-cursor {
   position: fixed;
@@ -1560,7 +1567,7 @@ body.classic .theme-toggle-btn:hover {
   top: 0; left: 0; width: 100vw; height: 100vh;
   z-index: -1;
   overflow: hidden;
-  background: var(--bg-main);
+  background: var(--bg);
 }
 .blob {
   position: absolute;
@@ -1569,7 +1576,7 @@ body.classic .theme-toggle-btn:hover {
   border-radius: 50%;
   animation: floatBlob 20s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
 }
-body.light .blob { opacity: 0.25; }
+body.classic .blob { opacity: 0.25; }
 body.classic .mesh-bg { display: block; opacity: 0.7; background: transparent; }
 body.classic .blob-1 { background: rgba(79, 70, 229, 0.45); }
 body.classic .blob-2 { background: rgba(8, 145, 178, 0.45); }
@@ -1592,6 +1599,6 @@ body.classic .blob-3 { background: rgba(22, 163, 74, 0.45); }
 .proj-grid .proj-card:nth-child(3) { transition-delay: 0.3s; }
 
 /* 3d tilt — preserve-3d so JS perspective transform works */
-.proj-card, .bento-item {
+.proj-card {
   transform-style: preserve-3d;
 }

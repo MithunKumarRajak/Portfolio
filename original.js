@@ -5,9 +5,9 @@ window.onload = function () {
     let btnIcon = document.getElementById("btnIcon");
 
     btn.onclick = function () {
-        document.body.classList.toggle("dark-theme");
+        document.body.classList.toggle("light-theme");
 
-        if (document.body.classList.contains("dark-theme")) {
+        if (document.body.classList.contains("light-theme")) {
             btnIcon.src = "images/sun.png";
             btnText.innerHTML = "Light";
         } else {

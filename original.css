@@ -1,7 +1,7 @@
-﻿* {
+* {
   margin: 0;
   padding: 0;
-  font-family: "Poppins" sans-serif;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
 
@@ -21,7 +21,7 @@ html {
   --title-color: #000;
 }
 
-body.dark-theme {
+body.light-theme {
   --background-color: #ffffff;
   --text-color: #919191;
   --title-color: #dcdcdc;
@@ -169,6 +169,10 @@ nav ul li a:hover::after {
   font-weight: 500;
   cursor: pointer;
   position: relative;
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
 }
 
 .tab-links::after {
