@@ -1,0 +1,22 @@
+{
+  "name": "Mithun Kumar Rajak | Portfolio",
+  "short_name": "mkr.sec",
+  "description": "Full-Stack Developer & Cybersecurity Specialist — Final-Year B.Tech CSE (2027). Google Cybersecurity certified, Top 20 HackWithAI 2026.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#080b12",
+  "theme_color": "#080b12",
+  "icons": [
+    {
+      "src": "images/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
