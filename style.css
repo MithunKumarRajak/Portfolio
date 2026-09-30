@@ -31,11 +31,12 @@
   --r-sm:       8px;
 }
 
-html { scroll-behavior: smooth; scroll-padding-top: 74px; }
+html { scroll-behavior: smooth; scroll-padding-top: 74px; overflow-x: hidden; }
 
 body {
   background: var(--bg);
   color: var(--text);
+  overflow-x: hidden;
   font-family: 'Inter', system-ui, sans-serif;
   font-size: 15px;
   line-height: 1.7;
@@ -334,6 +335,8 @@ a { text-decoration: none; color: inherit; }
 .burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
 .burger.open span:nth-child(2) { opacity: 0; }
 .burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+.mobile-nav-actions { display: none; }
 
 
 /* ============================================================
@@ -885,7 +888,8 @@ a { text-decoration: none; color: inherit; }
   font-size: 12.5px;
   color: var(--muted);
   line-height: 1.8;
-  white-space: nowrap;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 .c-keyword { color: #f472b6; }
 .c-fn      { color: #60a5fa; }
@@ -1432,6 +1436,37 @@ a { text-decoration: none; color: inherit; }
     padding: 12px 16px;
     border-radius: 8px;
   }
+
+  /* Header actions: icon-only on tablet/mobile */
+  .header-actions .btn-recruiter-nav span,
+  .header-actions .nav-resume span,
+  .header-actions .theme-toggle-btn .theme-label {
+    display: none;
+  }
+
+  /* Mobile nav actions row inside dropdown */
+  .main-nav.mobile-open .mobile-nav-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 16px;
+    margin-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+  .main-nav.mobile-open .mobile-nav-actions .btn-recruiter-nav,
+  .main-nav.mobile-open .mobile-nav-actions .nav-resume,
+  .main-nav.mobile-open .mobile-nav-actions .theme-toggle-btn {
+    height: 44px;
+    font-size: 13px;
+    flex: 1;
+    min-width: 110px;
+    justify-content: center;
+  }
+  .main-nav.mobile-open .mobile-nav-actions .btn-recruiter-nav span,
+  .main-nav.mobile-open .mobile-nav-actions .nav-resume span,
+  .main-nav.mobile-open .mobile-nav-actions .theme-toggle-btn .theme-label {
+    display: inline;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1448,32 +1483,72 @@ a { text-decoration: none; color: inherit; }
   .hero-numbers { grid-template-columns: repeat(2, 1fr); }
 
   .about-grid { grid-template-columns: 1fr; }
-  .about-img-wrap { max-width: 260px; }
+  .about-img-wrap { max-width: 260px; margin: 0 auto; }
 
   .skills-grid { grid-template-columns: 1fr; }
 
   .proj-grid { grid-template-columns: 1fr; }
+  .proj-featured { padding: 24px; }
   .hack-grid { grid-template-columns: 1fr; }
 
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .contact-right form { padding: 22px; }
-  .contact-heading { font-size: 36px; }
+  .contact-heading { font-size: clamp(28px, 8vw, 36px); }
 
   .cert-layout { grid-template-columns: 1fr; gap: 40px; }
+  .cert-info strong { white-space: normal; }
   .edu-card { flex-direction: column; align-items: flex-start; gap: 16px; }
   .edu-meta { text-align: left; }
+
+  .exp-card { padding: 22px; }
+
+  .terminal-body { min-height: 180px; }
 
   .footer-row { justify-content: center; text-align: center; }
 
   .section { padding: 72px 0; }
+
+  /* Touch-friendly targets (44px minimum) */
+  .sk-tags span { padding: 8px 14px; font-size: 13px; }
+  .cert-tab { padding: 10px 16px; font-size: 12px; }
+  .proj-link { padding: 10px 16px; }
+  .copy-pill-btn { padding: 8px 14px; }
+  .term-pill { padding: 8px 14px; }
+  .about-socials a { padding: 8px 0; }
+  .proj-btn { padding: 10px 16px; }
+
+  /* Security badge wrap */
+  .security-verified-badge { white-space: normal; font-size: 10px; padding: 3px 10px; }
+
+  /* Prevent toast overlapping scroll-to-top */
+  .toast-container { bottom: 76px; }
+
+  /* Modal padding reduction */
+  .modal-header { padding: 18px 20px; }
+  .modal-body { padding: 20px; }
+  .modal-footer { padding: 14px 20px; }
+  .modal-header h2 { font-size: 20px; }
 }
 
 @media (max-width: 480px) {
+  .wrap { padding: 0 16px; }
+  .hero { padding: 80px 16px 40px; }
   .hero-numbers { grid-template-columns: 1fr 1fr; }
   .hero-btns { flex-direction: column; }
   .btn-solid, .btn-ghost { width: 100%; justify-content: center; }
   .hack-header { flex-direction: column; }
   .proj-feat-meta { flex-wrap: wrap; }
+  .proj-featured { padding: 18px; }
+  .exp-card { padding: 18px; }
+}
+
+@media (max-width: 360px) {
+  .hero-numbers { grid-template-columns: 1fr; }
+  .h-num { padding: 18px 16px; }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .hero { min-height: auto; padding-top: 80px; padding-bottom: 40px; }
 }
 
 

@@ -15,6 +15,8 @@ const navLinks     = document.querySelectorAll('.nav-a');
 const scrollTop    = document.getElementById('scrollTop');
 const themeBtn     = document.getElementById('themeToggle');
 const toastBox     = document.getElementById('toastContainer');
+const mobileRecruiterBtn = document.getElementById('mobileRecruiterBtn');
+const mobileThemeBtn     = document.getElementById('mobileThemeToggle');
 
 // ---- Toast Notification System ----
 function showToast(message, icon = 'fa-check') {
@@ -62,6 +64,13 @@ function applyTheme(isClassic) {
   document.body.classList.toggle('classic', isClassic);
   if (themeIcon) themeIcon.textContent  = isClassic ? '🌙' : '☀️';
   if (themeLabel) themeLabel.textContent = isClassic ? 'Modern' : 'Classic';
+  // Sync mobile theme toggle
+  if (mobileThemeBtn) {
+    const mIcon = mobileThemeBtn.querySelector('.theme-icon');
+    const mLabel = mobileThemeBtn.querySelector('.theme-label');
+    if (mIcon) mIcon.textContent = isClassic ? '🌙' : '☀️';
+    if (mLabel) mLabel.textContent = isClassic ? 'Modern' : 'Classic';
+  }
   localStorage.setItem('portfolio-theme', isClassic ? 'classic' : 'modern');
 }
 
@@ -71,6 +80,12 @@ applyTheme(savedTheme === 'classic');
 
 if (themeBtn) {
   themeBtn.addEventListener('click', () => {
+    const isNowClassic = !document.body.classList.contains('classic');
+    applyTheme(isNowClassic);
+  });
+}
+if (mobileThemeBtn) {
+  mobileThemeBtn.addEventListener('click', () => {
     const isNowClassic = !document.body.classList.contains('classic');
     applyTheme(isNowClassic);
   });
@@ -139,6 +154,13 @@ function closeRecruiterModal() {
 if (recruiterNavBtn) recruiterNavBtn.addEventListener('click', openRecruiterModal);
 if (heroRecruiterBtn) heroRecruiterBtn.addEventListener('click', openRecruiterModal);
 if (contactRecruiterBtn) contactRecruiterBtn.addEventListener('click', openRecruiterModal);
+if (mobileRecruiterBtn) {
+  mobileRecruiterBtn.addEventListener('click', () => {
+    if (burger) burger.classList.remove('open');
+    if (mainNav) mainNav.classList.remove('mobile-open');
+    openRecruiterModal();
+  });
+}
 if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeRecruiterModal);
 
 if (recruiterModal) {
