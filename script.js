@@ -1,5 +1,5 @@
 /*
-  script.js — mithun kumar rajak portfolio
+  script.js - mithun kumar rajak portfolio
   Senior Developer & Cybersecurity Handling Focus
 */
 'use strict';
@@ -431,7 +431,7 @@ if (contactForm) {
         mode: 'no-cors',
         body: new FormData(contactForm),
       });
-      formMsg.textContent = "✓ Securely delivered — I'll get back to you promptly.";
+      formMsg.textContent = "✓ Securely delivered - I'll get back to you promptly.";
       formMsg.style.color = '#4ade80';
       showToast('Message sent successfully!', 'fa-paper-plane');
       contactForm.reset();

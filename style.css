@@ -1,8 +1,8 @@
 /*
-  style.css — mithun's portfolio
+  style.css - mithun's portfolio
 */
 
-/* Fonts loaded via <link> in index.html — no duplicate @import needed */
+/* Fonts loaded via <link> in index.html - no duplicate @import needed */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -354,7 +354,7 @@ a { text-decoration: none; color: inherit; }
   margin: 0 auto;
 }
 
-/* animated blobs — not particles, just nice CSS gradients */
+/* animated blobs - not particles, just nice CSS gradients */
 .hero-bg-blob {
   position: absolute;
   width: 700px;
@@ -1648,7 +1648,7 @@ body.classic .burger {
   border-color: rgba(0, 0, 0, 0.1);
 }
 
-/* hero blobs — lighter colours on light bg */
+/* hero blobs - lighter colours on light bg */
 body.classic .hero-bg-blob {
   background: radial-gradient(circle, rgba(79,70,229,0.07) 0%, transparent 70%);
 }
@@ -1676,7 +1676,7 @@ body.classic .now-card {
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
 
-/* skill / project cards — add shadow instead of glassy border */
+/* skill / project cards - add shadow instead of glassy border */
 body.classic .skill-card,
 body.classic .proj-card,
 body.classic .hack-card,
@@ -1840,7 +1840,7 @@ body.classic .blob-3 { background: rgba(22, 163, 74, 0.45); }
 .proj-grid .proj-card:nth-child(2) { transition-delay: 0.2s; }
 .proj-grid .proj-card:nth-child(3) { transition-delay: 0.3s; }
 
-/* 3d tilt — preserve-3d so JS perspective transform works */
+/* 3d tilt - preserve-3d so JS perspective transform works */
 .proj-card {
   transform-style: preserve-3d;
 }
